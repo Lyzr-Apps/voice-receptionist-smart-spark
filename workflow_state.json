@@ -1,0 +1,12 @@
+{
+  "agents": [
+    {
+      "name": "Hotel Concierge Agent",
+      "agent_id": "698a1b3f0769219591839a9c",
+      "type": "voice",
+      "voice_mode": "inbound",
+      "model": "gpt-4.1",
+      "provider": "openai"
+    }
+  ]
+}

@@ -4,64 +4,38 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --background: 35 29% 95%;
+    --foreground: 30 22% 14%;
+    --card: 35 29% 92%;
+    --card-foreground: 30 22% 14%;
+    --popover: 35 29% 90%;
+    --popover-foreground: 30 22% 14%;
+    --primary: 27 61% 26%;
+    --primary-foreground: 35 29% 98%;
+    --secondary: 35 20% 88%;
+    --secondary-foreground: 30 22% 18%;
+    --accent: 43 75% 38%;
+    --accent-foreground: 35 29% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --muted: 35 15% 85%;
+    --muted-foreground: 30 20% 45%;
+    --border: 27 61% 26%;
+    --input: 35 15% 75%;
+    --ring: 27 61% 26%;
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 35 25% 90%;
+    --sidebar-foreground: 30 22% 14%;
+    --sidebar-border: 35 20% 85%;
+    --sidebar-primary: 27 61% 26%;
+    --sidebar-primary-foreground: 35 29% 98%;
+    --sidebar-accent: 35 20% 85%;
+    --sidebar-accent-foreground: 30 22% 14%;
+    --chart-1: 27 61% 26%;
+    --chart-2: 43 75% 38%;
+    --chart-3: 30 55% 25%;
+    --chart-4: 35 45% 42%;
+    --chart-5: 20 65% 35%;
   }
 }
 
@@ -73,3 +47,137 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Pulse ring animation for active mic */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-ring-outer {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+/* Waveform bar animation */
+@keyframes waveform-1 {
+  0%, 100% { height: 12px; }
+  50% { height: 32px; }
+}
+@keyframes waveform-2 {
+  0%, 100% { height: 18px; }
+  50% { height: 40px; }
+}
+@keyframes waveform-3 {
+  0%, 100% { height: 8px; }
+  50% { height: 28px; }
+}
+@keyframes waveform-4 {
+  0%, 100% { height: 20px; }
+  50% { height: 36px; }
+}
+@keyframes waveform-5 {
+  0%, 100% { height: 14px; }
+  50% { height: 44px; }
+}
+
+/* Speaking waveform */
+@keyframes speak-wave-1 {
+  0%, 100% { height: 10px; }
+  25% { height: 24px; }
+  75% { height: 16px; }
+}
+@keyframes speak-wave-2 {
+  0%, 100% { height: 16px; }
+  25% { height: 36px; }
+  75% { height: 20px; }
+}
+@keyframes speak-wave-3 {
+  0%, 100% { height: 6px; }
+  25% { height: 20px; }
+  75% { height: 12px; }
+}
+
+/* Slide up animation for booking panel */
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade in */
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Subtle float */
+@keyframes float-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Connecting dots */
+@keyframes connecting-dot {
+  0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1.2); }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+.animate-pulse-ring-outer {
+  animation: pulse-ring-outer 1.5s ease-out infinite 0.3s;
+}
+
+.animate-waveform-1 { animation: waveform-1 0.8s ease-in-out infinite; }
+.animate-waveform-2 { animation: waveform-2 0.6s ease-in-out infinite 0.1s; }
+.animate-waveform-3 { animation: waveform-3 0.9s ease-in-out infinite 0.2s; }
+.animate-waveform-4 { animation: waveform-4 0.7s ease-in-out infinite 0.15s; }
+.animate-waveform-5 { animation: waveform-5 0.85s ease-in-out infinite 0.05s; }
+
+.animate-speak-1 { animation: speak-wave-1 1.2s ease-in-out infinite; }
+.animate-speak-2 { animation: speak-wave-2 1s ease-in-out infinite 0.15s; }
+.animate-speak-3 { animation: speak-wave-3 1.4s ease-in-out infinite 0.3s; }
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+.animate-float {
+  animation: float-subtle 3s ease-in-out infinite;
+}
+
+.animate-connecting-dot-1 { animation: connecting-dot 1.4s ease-in-out infinite; }
+.animate-connecting-dot-2 { animation: connecting-dot 1.4s ease-in-out infinite 0.2s; }
+.animate-connecting-dot-3 { animation: connecting-dot 1.4s ease-in-out infinite 0.4s; }

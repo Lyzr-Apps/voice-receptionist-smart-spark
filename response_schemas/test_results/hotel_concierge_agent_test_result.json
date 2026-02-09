@@ -1,0 +1,15 @@
+{
+  "agent_name": "Hotel Concierge Agent",
+  "agent_id": "698a1b3f0769219591839a9c",
+  "test_message": "I'd like to book a room for next weekend please",
+  "expected_purpose": "Voice-based hotel concierge that handles incoming voice calls",
+  "timestamp": "2026-02-09T17:38:15.661978",
+  "is_valid_json": false,
+  "validation_errors": [
+    "Response is not valid JSON: Expecting value: line 1 column 1 (char 0)"
+  ],
+  "actual_response": {
+    "raw_text": "Good evening, welcome to our hotel. How may I assist you today?\n\nI'd be happy to help you book a room for next weekend. Could you provide me with a few more details to help me find the perfect accommodation for you? \n\nSpecifically, I'll need to know:\n- What are your exact check-in and check-out dates?\n- How many guests will be staying?\n- Do you have a preference for room type (standard, deluxe, or suite)?\n\nThe more information you can share, the better I can assist you in finding the ideal room for your stay."
+  },
+  "raw_response": "Good evening, welcome to our hotel. How may I assist you today?\n\nI'd be happy to help you book a room for next weekend. Could you provide me with a few more details to help me find the perfect accommodation for you? \n\nSpecifically, I'll need to know:\n- What are your exact check-in and check-out dates?\n- How many guests will be staying?\n- Do you have a preference for room type (standard, deluxe, or suite)?\n\nThe more information you can share, the better I can assist you in finding the ideal room for your stay."
+}
